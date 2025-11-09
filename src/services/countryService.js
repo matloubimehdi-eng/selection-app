@@ -1,40 +1,44 @@
-// Add this helper function to debug paths
+// Service layer with new countries and capitals
 const getFlagPath = (countryCode) => {
-  const isDev = process.env.NODE_ENV === 'development';
   const basePath = process.env.PUBLIC_URL || '';
-  
-  // Log the actual path being used
-  const path = `${basePath}/flags/${countryCode}.png`;
-  if (isDev) {
-    console.log(`Flag path for ${countryCode}:`, path);
-  }
-  return path;
+  return `${basePath}/flags/${countryCode}.png`;
 };
 
 export const COUNTRIES = [
   {
-    id: 'uk',
-    name: 'United Kingdom',
-    flag: getFlagPath('uk'),
-    code: 'GB'
+    id: 'iran',
+    name: 'Iran',
+    capital: 'Tehran',
+    flag: getFlagPath('iran'),
+    code: 'IR'
   },
   {
-    id: 'germany',
-    name: 'Germany',
-    flag: getFlagPath('germany'),
-    code: 'DE'
+    id: 'turkey',
+    name: 'Turkey',
+    capital: 'Ankara',
+    flag: getFlagPath('turkey'),
+    code: 'TR'
   },
   {
-    id: 'italy',
-    name: 'Italy',
-    flag: getFlagPath('italy'),
-    code: 'IT'
+    id: 'netherlands',
+    name: 'Netherlands',
+    capital: 'Amsterdam',
+    flag: getFlagPath('netherlands'),
+    code: 'NL'
   },
   {
-    id: 'spain',
-    name: 'Spain',
-    flag: getFlagPath('spain'),
-    code: 'ES'
+    id: 'canada',
+    name: 'Canada',
+    capital: 'Ottawa',
+    flag: getFlagPath('canada'),
+    code: 'CA'
+  },
+  {
+    id: 'sweden',
+    name: 'Sweden',
+    capital: 'Stockholm',
+    flag: getFlagPath('sweden'),
+    code: 'SE'
   }
 ];
 
